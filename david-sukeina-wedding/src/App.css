@@ -1,15 +1,17 @@
 /* Main App Styling */
 :root {
-  --primary-color: #8D6B94; /* Elegant purple */
-  --secondary-color: #F3E9DC; /* Soft cream */
-  --accent-color: #C1A5A9; /* Dusty rose */
-  --text-color: #2D2328; /* Deep charcoal */
-  --light-text: #f5f5f5;
-  --background-color: #FCFAF7; /* Off-white */
+  --primary-color: #ffd1df; /* Soft wedding pink */
+  --secondary-color: #fff7fa; /* Light blush background */
+  --accent-color: #b47b84; /* Muted rose gold */
+  --text-color: #3a2b2f; /* Elegant deep brown */
+  --light-text: #fff;
+  --background-color: #fff7fa; /* Off-white blush */
   --error-color: #d9534f;
   --success-color: #5cb85c;
-  --font-family: 'Poppins', 'Montserrat', sans-serif;
+  --font-family: 'Playfair Display', 'Poppins', 'serif';
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
