@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { FaCalendarAlt, FaMapMarkerAlt, FaHeart } from 'react-icons/fa';
 
 import proposalImg from '../assets/proposal.jpg';
-import ringImg from '../assets/ring.jpg';
+import ringImg from '../assets/ring.jpeg';
 
 const HeroSection = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
