@@ -94,7 +94,6 @@ const UploadPhoto = () => {
               <h2>Upload a Photo</h2>
               <p>If you have any pictures of us together, or photos of us and you would like them to be in our wedding presentation, please upload them here.</p>
               {error && <Alert variant="danger">{error}</Alert>}
-              {success && <Alert variant="success">Photo uploaded successfully!</Alert>}
               <Form onSubmit={handleUpload}>
                 <Form.Group controlId="photoUpload" className="mb-3">
                   <Form.Label>Select Photos</Form.Label>
