@@ -50,7 +50,8 @@ const CreateAccount = () => {
         createdAt: new Date()
       });
       setSuccess(true);
-      setTimeout(() => navigate('/'), 1500);
+      setIsSubmitting(false);
+      navigate('/');
     } catch (err) {
       setError('Could not create account: ' + err.message);
       setIsSubmitting(false);

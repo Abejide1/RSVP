@@ -31,7 +31,7 @@ const RSVP = () => {
     phoneNumber: '',
     attending: 'yes',
     guestCount: 1,
-    dietaryRestrictions: '',
+    plusOneCode: '',
     stayingAtHotel: 'yes',
     travelDetails: {
       flightNumber: '',
@@ -43,6 +43,9 @@ const RSVP = () => {
     stayDuration: '1-3',
     message: '',
     needsShuttle: 'yes',
+    buyDisposableCamera: 'no',
+    buySprayMoney: 'no',
+    sprayMoneyAmount: '',
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -165,38 +168,41 @@ const RSVP = () => {
                     </Form.Group>
                   </Col>
                   <Col md={6}>
+                    <Form.Group className="mb-3" controlId="plusOneCode">
+                      <Form.Label>Have a code for a plus one?</Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="plusOneCode"
+                        value={formData.plusOneCode}
+                        onChange={handleChange}
+                        placeholder="Enter code to allow a plus 1"
+                        autoComplete="off"
+                      />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="guestCount">
                       <Form.Label>Number of Guests (including yourself)</Form.Label>
-                      <Form.Control 
-                        type="number" 
+                      <Form.Control
+                        type="number"
                         name="guestCount"
                         value={formData.guestCount}
                         onChange={handleChange}
                         min="1"
                         max="5"
                         required
-                        disabled={formData.attending === 'no'}
+                        disabled={formData.plusOneCode !== 'PLUS1CODE' || formData.attending === 'no'}
+                        style={{ backgroundColor: formData.plusOneCode !== 'PLUS1CODE' ? '#eee' : 'white', color: '#888' }}
+                        placeholder={formData.plusOneCode !== 'PLUS1CODE' ? 'Enter code to allow a plus 1' : 'Enter number of guests'}
                       />
+                      {formData.plusOneCode !== 'PLUS1CODE' && (
+                        <small className="text-muted">Enter code to allow a plus 1</small>
+                      )}
                     </Form.Group>
                   </Col>
                 </Row>
                 
                 {formData.attending === 'yes' && (
                   <>
-                    <Form.Group className="mb-3" controlId="dietaryRestrictions">
-                      <Form.Label>Any Dietary Restrictions?</Form.Label>
-                      <Form.Control 
-                        as="textarea" 
-                        rows={2}
-                        name="dietaryRestrictions"
-                        value={formData.dietaryRestrictions}
-                        onChange={handleChange}
-                        placeholder="Please let us know of any dietary restrictions or allergies"
-                      />
-                    </Form.Group>
-                    
                     <hr className="my-4" />
-                    
                     <h4>Travel & Accommodation Details</h4>
                     <p className="text-muted mb-4">
                       Please provide your travel details to help us coordinate airport shuttles 
@@ -313,6 +319,44 @@ const RSVP = () => {
                   </>
                 )}
                 
+                <Form.Group className="mb-3" controlId="buyDisposableCamera">
+                  <Form.Label>Do you want to buy a disposable camera?</Form.Label>
+                  <Form.Select 
+                    name="buyDisposableCamera"
+                    value={formData.buyDisposableCamera}
+                    onChange={handleChange}
+                  >
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </Form.Select>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="buySprayMoney">
+                  <Form.Label>Do you want to buy spray money?</Form.Label>
+                  <Form.Select 
+                    name="buySprayMoney"
+                    value={formData.buySprayMoney}
+                    onChange={handleChange}
+                  >
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </Form.Select>
+                </Form.Group>
+
+                {formData.buySprayMoney === 'yes' && (
+                  <Form.Group className="mb-3" controlId="sprayMoneyAmount">
+                    <Form.Label>If yes, how much?</Form.Label>
+                    <Form.Control 
+                      type="number"
+                      name="sprayMoneyAmount"
+                      value={formData.sprayMoneyAmount}
+                      onChange={handleChange}
+                      placeholder="Enter amount (e.g., 50)"
+                      min="1"
+                    />
+                  </Form.Group>
+                )}
+
                 <Form.Group className="mb-3" controlId="message">
                   <Form.Label>Additional Message (Optional)</Form.Label>
                   <Form.Control 

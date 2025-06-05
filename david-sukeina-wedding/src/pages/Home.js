@@ -125,7 +125,7 @@ const CountdownContainer = styled.div`
 `;
 
 // You would need to replace these with actual wedding details
-const weddingDate = new Date('2025-10-15T16:00:00');
+const weddingDate = new Date('2026-08-06T16:00:00');
 const weddingLocation = 'Tangier, Morocco';
 
 const Home = () => {

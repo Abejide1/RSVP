@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaHeart, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaHeart, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const StyledFooter = styled.footer`
   background-color: var(--primary-color);
@@ -80,10 +80,13 @@ const Footer = () => {
             <h5 className="footer-heading">Connect With Us</h5>
             <p>Have questions? Reach out to us.</p>
             <div className="footer-social">
-              <a href="mailto:davidandsukeina@example.com" aria-label="Email">
+              <a href="mailto:davidabejide96@gmail.com" aria-label="Email">
                 <FaEnvelope />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="tel:6305232400" aria-label="Phone">
+                <FaPhone />
+              </a>
+              <a href="https://instagram.com/abejide_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
             </div>

@@ -82,7 +82,7 @@ const TravelInfo = () => {
           <Col md={8} className="text-center">
             <h4>Questions?</h4>
             <p>
-              If you have any questions or need assistance with your travel arrangements, please contact us at <a href="mailto:davidandsukeina@example.com">davidandsukeina@example.com</a>.
+              If you have any questions or need assistance with your travel arrangements, please contact us at <a href="mailto:davidabejide96@gmail.com">davidabejide96@gmail.com</a>.
             </p>
           </Col>
         </Row>
