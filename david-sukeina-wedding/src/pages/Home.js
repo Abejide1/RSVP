@@ -189,7 +189,7 @@ const Home = () => {
           <h2>Countdown to Our Big Day</h2>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
             <img
-              src={StangierImg}
+              src={tangierImg}
               alt="Wedding placeholder"
               style={{ width: '320px', height: '200px', objectFit: 'cover', borderRadius: '18px', border: '3px solid var(--primary-color)', boxShadow: '0 4px 16px rgba(0,0,0,0.07)' }}
             />
