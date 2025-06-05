@@ -4,7 +4,7 @@
   --secondary-color: #fff7fa; /* Light blush background */
   --accent-color: #b47b84; /* Muted rose gold */
   --text-color: #3a2b2f; /* Elegant deep brown */
-  --light-text: #fff;
+  --light-text: #222; /* Use dark text for contrast on pink */
   --background-color: #fff7fa; /* Off-white blush */
   --error-color: #d9534f;
   --success-color: #5cb85c;
@@ -25,6 +25,35 @@ body {
   background-color: var(--background-color);
   line-height: 1.6;
 }
+
+.bg-primary, .btn-primary, .card-header, .navbar, .footer-heading, .main-content, .App {
+  color: #222 !important;
+}
+
+.bg-primary, .btn-primary, .card-header, .navbar, .main-content, .App {
+  background-color: var(--primary-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6, .footer-heading {
+  color: #222 !important;
+}
+
+.text-primary {
+  color: #222 !important;
+}
+
+.btn-primary, .btn-secondary {
+  color: #222 !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #ffc1d6 !important;
+  color: #222 !important;
+  border-color: #ffc1d6 !important;
+}
+
 
 .App {
   display: flex;
