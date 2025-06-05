@@ -26,6 +26,7 @@ const Admin = () => {
   const [rsvps, setRsvps] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [photoCount, setPhotoCount] = useState(0);
 
   useEffect(() => {
     const fetchRsvps = async () => {
@@ -43,12 +44,24 @@ const Admin = () => {
       }
     };
     fetchRsvps();
+
+    // Fetch photo count
+    const fetchPhotoCount = async () => {
+      try {
+        const photoSnapshot = await getDocs(collection(db, 'wedding_photos'));
+        setPhotoCount(photoSnapshot.size);
+      } catch {}
+    };
+    fetchPhotoCount();
   }, []);
 
   return (
     <StyledSection>
       <Container>
         <h2>RSVP Tracker (Admin)</h2>
+        <div style={{ marginBottom: '1rem', fontWeight: 500, color: 'var(--primary-color)' }}>
+          Uploaded Wedding Photos: {photoCount}
+        </div>
         <Row className="justify-content-center">
           <Col lg={12}>
             <AdminCard>

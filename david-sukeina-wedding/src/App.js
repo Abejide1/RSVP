@@ -19,6 +19,7 @@ import Admin from './pages/Admin';
 import Login from './pages/Login';
 import ThankYou from './pages/ThankYou';
 import CreateAccount from './pages/CreateAccount';
+import UploadPhoto from './pages/UploadPhoto';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -58,8 +59,13 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/rsvp" element={<RSVP />} />
-            <Route path="/travel-info" element={<TravelInfo />} />
+            {user && (
+              <>
+                <Route path="/rsvp" element={<RSVP />} />
+                <Route path="/travel-info" element={<TravelInfo />} />
+                <Route path="/upload-photo" element={<UploadPhoto />} />
+              </>
+            )}
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/login" element={<Login />} />
             <Route path="/create-account" element={<CreateAccount />} />

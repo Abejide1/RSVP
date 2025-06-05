@@ -31,10 +31,19 @@ const InfoCard = styled(Card)`
   }
 `;
 
+import tangierImg from '../assets/tangier.jpg';
+
 const TravelInfo = () => {
   return (
     <StyledSection>
       <Container>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+          <img
+            src={tangierImg}
+            alt="Tangier, Morocco"
+            style={{ width: '100%', maxWidth: '420px', height: '220px', objectFit: 'cover', borderRadius: '18px', border: '3px solid var(--primary-color)', boxShadow: '0 4px 16px rgba(0,0,0,0.07)' }}
+          />
+        </div>
         <h2>Travel & Accommodation Information</h2>
         <Row className="justify-content-center mb-5">
           <Col md={8} className="text-center">
