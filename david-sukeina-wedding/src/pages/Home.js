@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { FaCalendarAlt, FaMapMarkerAlt, FaHeart } from 'react-icons/fa';
 
 import proposalImg from '../assets/proposal.jpg';
+import tangierImg from '../assets/tangier.jpg';
 
 const HeroSection = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -188,7 +189,7 @@ const Home = () => {
           <h2>Countdown to Our Big Day</h2>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
             <img
-              src={require('../assets/tangier.jpg')}
+              src={StangierImg}
               alt="Wedding placeholder"
               style={{ width: '320px', height: '200px', objectFit: 'cover', borderRadius: '18px', border: '3px solid var(--primary-color)', boxShadow: '0 4px 16px rgba(0,0,0,0.07)' }}
             />
