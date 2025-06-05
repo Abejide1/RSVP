@@ -32,7 +32,7 @@ const InfoCard = styled(Card)`
   }
 `;
 
-
+function TravelInfo() {
   return (
     <StyledSection>
       <Container>
@@ -97,6 +97,6 @@ const InfoCard = styled(Card)`
       </Container>
     </StyledSection>
   );
-};
+}
 
 export default TravelInfo;
