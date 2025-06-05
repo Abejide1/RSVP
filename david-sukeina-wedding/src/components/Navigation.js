@@ -91,6 +91,7 @@ const Navigation = ({ user }) => {
               <>
                 <Nav.Link as={Link} to="/rsvp">RSVP</Nav.Link>
                 <Nav.Link as={Link} to="/travel-info">Travel Info</Nav.Link>
+                <Nav.Link as={Link} to="/upload-photo">Upload Image</Nav.Link>
               </>
             )}
             {!user && (

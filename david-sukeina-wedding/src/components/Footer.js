@@ -91,7 +91,7 @@ const Footer = () => {
               </a>
             </div>
             <div style={{ marginTop: '1.5rem', textAlign: 'left' }}>
-              <a href="/login" style={{ fontSize: '0.9rem', color: '#ccc', textDecoration: 'underline dotted', opacity: 0.6 }}>
+              <a href="/admin-login" style={{ fontSize: '0.9rem', color: '#ccc', textDecoration: 'underline dotted', opacity: 0.6 }}>
                 Admin Login
               </a>
             </div>

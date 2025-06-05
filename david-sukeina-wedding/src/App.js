@@ -20,6 +20,7 @@ import Login from './pages/Login';
 import ThankYou from './pages/ThankYou';
 import CreateAccount from './pages/CreateAccount';
 import UploadPhoto from './pages/UploadPhoto';
+import AdminLogin from './pages/AdminLogin';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,11 +43,7 @@ function App() {
     if (loading) return <div className="loading-screen">Loading...</div>;
     if (!user) return <Navigate to="/login" />;
     if (user.email !== ADMIN_EMAIL) {
-      return (
-        <div className="loading-screen">
-          Access denied. You do not have permission to view this page.
-        </div>
-      );
+      return <Navigate to="/" />;
     }
     return children;
   };
@@ -69,6 +66,8 @@ function App() {
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/login" element={<Login />} />
             <Route path="/create-account" element={<CreateAccount />} />
+            <Route path="/upload-photo" element={user ? <UploadPhoto /> : <Navigate to="/login" />} />
+            <Route path="/admin-login" element={<AdminLogin />} />
             <Route 
               path="/admin" 
               element={<ProtectedRoute><Admin /></ProtectedRoute>} 
