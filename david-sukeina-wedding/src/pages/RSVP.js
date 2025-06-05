@@ -49,6 +49,7 @@ const RSVP = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   
   const handleChange = (e) => {
@@ -74,17 +75,18 @@ const RSVP = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
-    
+    setSuccess(false);
     try {
-      // Save data to Firestore
-      await addDoc(collection(db, 'rsvps'), {
+      const dataToSubmit = {
         ...formData,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
-      });
-      
-      // Redirect to thank you page
-      navigate('/thank-you');
+      };
+      // Save data to Firestore
+      await addDoc(collection(db, 'rsvps'), dataToSubmit);
+      setIsSubmitting(false);
+      setSuccess(true);
+      setTimeout(() => navigate('/thank-you'), 1500);
     } catch (err) {
       console.error('Error saving RSVP:', err);
       setError('There was an error submitting your RSVP. Please try again.');
@@ -369,7 +371,7 @@ const RSVP = () => {
                   />
                 </Form.Group>
                 
-                <div className="text-center mt-4">
+                <div className="text-center">
                   <Button 
                     variant="primary" 
                     type="submit"
@@ -378,6 +380,11 @@ const RSVP = () => {
                   >
                     {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
                   </Button>
+                  {success && (
+                    <Alert variant="success" className="mt-3">
+                      RSVP submitted successfully!
+                    </Alert>
+                  )}
                 </div>
               </Form>
             </FormCard>

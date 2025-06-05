@@ -75,9 +75,12 @@ const UploadPhoto = () => {
       setSuccess(results);
       setFiles([]);
       setIsUploading(false);
+      setProgress([]);
+      setTimeout(() => setSuccess([]), 3000);
     } catch (err) {
       setError('Upload failed.');
       setIsUploading(false);
+      setProgress([]);
     }
   };
 
@@ -97,13 +100,13 @@ const UploadPhoto = () => {
                   <Form.Label>Select Photos</Form.Label>
                   <Form.Control type="file" accept="image/*" multiple onChange={handleFileChange} disabled={isUploading} />
                 </Form.Group>
-                {progress.length > 0 && progress.map((prog, idx) => (
+                {isUploading && progress.length > 0 && progress.map((prog, idx) => (
                   <ProgressBar key={idx} now={prog} label={`${prog}%`} className="mb-2" />
                 ))}
                 <Button type="submit" variant="primary" disabled={isUploading}>
                   {isUploading ? 'Uploading...' : 'Upload'}
                 </Button>
-                {success.length > 0 && (
+                {success.length > 0 && files.length === 0 && !isUploading && (
                   <Alert variant="success" className="mt-3">
                     Uploaded: {success.join(', ')}
                   </Alert>

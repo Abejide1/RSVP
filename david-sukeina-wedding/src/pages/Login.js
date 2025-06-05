@@ -52,7 +52,7 @@ const Login = () => {
         <Row className="justify-content-center">
           <Col md={6}>
             <LoginCard>
-              <h2>Admin Login</h2>
+              <h2>Login</h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="email">
