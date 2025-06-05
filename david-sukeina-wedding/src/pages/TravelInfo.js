@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaPlaneArrival, FaHotel, FaCarSide } from 'react-icons/fa';
+import tangierImg from '../assets/tangier.jpg';
 
 const StyledSection = styled.section`
   padding: 4rem 0;
@@ -31,9 +32,7 @@ const InfoCard = styled(Card)`
   }
 `;
 
-import tangierImg from '../assets/tangier.jpg';
 
-const TravelInfo = () => {
   return (
     <StyledSection>
       <Container>
