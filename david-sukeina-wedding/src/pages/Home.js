@@ -126,7 +126,7 @@ const CountdownContainer = styled.div`
 `;
 
 // You would need to replace these with actual wedding details
-const weddingDate = new Date('2026-08-06T16:00:00');
+const weddingDate = new Date('2026-07-10T16:00:00');
 const weddingLocation = 'Tangier, Morocco';
 
 const Home = () => {
@@ -177,11 +177,20 @@ const Home = () => {
           <FaMapMarkerAlt style={{ marginRight: '0.5rem' }} />
           {weddingLocation}
         </p>
-        <Link to="/create-account">
-          <Button variant="primary" size="lg" className="mt-4">
-            RSVP Now
-          </Button>
-        </Link>
+        {/* RSVP Now button: /rsvp if logged in, /create-account if not */}
+        {typeof window !== 'undefined' && localStorage.getItem('userLoggedIn') === 'true' ? (
+          <Link to="/rsvp">
+            <Button variant="primary" size="lg" className="mt-4">
+              RSVP Now
+            </Button>
+          </Link>
+        ) : (
+          <Link to="/create-account">
+            <Button variant="primary" size="lg" className="mt-4">
+              RSVP Now
+            </Button>
+          </Link>
+        )}
       </HeroSection>
       
       <StyledSection>
