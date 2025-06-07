@@ -63,7 +63,7 @@ const Login = () => {
                     value={form.email}
                     onChange={handleChange}
                     required
-                    placeholder="Enter admin email"
+                    placeholder="Enter your email"
                   />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="password">
