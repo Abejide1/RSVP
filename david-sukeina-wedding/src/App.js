@@ -55,7 +55,7 @@ function App() {
         <Navigation user={user} />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home user={user} />} />
             {user && (
               <>
                 <Route path="/rsvp" element={<RSVP />} />

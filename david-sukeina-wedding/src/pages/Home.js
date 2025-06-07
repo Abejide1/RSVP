@@ -129,7 +129,7 @@ const CountdownContainer = styled.div`
 const weddingDate = new Date('2026-07-31T00:00:00Z');
 const weddingLocation = 'Tangier, Morocco';
 
-const Home = () => {
+const Home = ({ user }) => {
   // Countdown functionality
   const [countdown, setCountdown] = React.useState({
     days: 0,
@@ -173,7 +173,7 @@ const Home = () => {
           {weddingLocation}
         </p>
         {/* RSVP Now button: /rsvp if logged in, /create-account if not */}
-        {typeof window !== 'undefined' && localStorage.getItem('userLoggedIn') === 'true' ? (
+        {user ? (
           <Link to="/rsvp">
             <Button variant="primary" size="lg" className="mt-4">
               RSVP Now
