@@ -126,7 +126,7 @@ const CountdownContainer = styled.div`
 `;
 
 // You would need to replace these with actual wedding details
-const weddingDate = new Date('2026-07-10T16:00:00');
+const weddingDate = new Date('2026-07-31T00:00:00Z');
 const weddingLocation = 'Tangier, Morocco';
 
 const Home = () => {
@@ -166,12 +166,7 @@ const Home = () => {
         <h2>We're Getting Married!</h2>
         <p className="hero-date">
           <FaCalendarAlt style={{ marginRight: '0.5rem' }} />
-          {weddingDate.toLocaleDateString('en-US', { 
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
+          Thursday, July 30, 2026
         </p>
         <p className="hero-location">
           <FaMapMarkerAlt style={{ marginRight: '0.5rem' }} />
