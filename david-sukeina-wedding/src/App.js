@@ -21,6 +21,8 @@ import ThankYou from './pages/ThankYou';
 import CreateAccount from './pages/CreateAccount';
 import UploadPhoto from './pages/UploadPhoto';
 import AdminLogin from './pages/AdminLogin';
+import OurStory from './pages/OurStory';
+import WeddingDetails from './pages/WeddingDetails';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -64,6 +66,8 @@ function App() {
               </>
             )}
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/our-story" element={<OurStory />} />
+            <Route path="/wedding-details" element={<WeddingDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/create-account" element={<CreateAccount />} />
             <Route path="/upload-photo" element={user ? <UploadPhoto /> : <Navigate to="/login" />} />

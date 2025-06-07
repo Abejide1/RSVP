@@ -231,6 +231,9 @@ const Home = ({ user }) => {
                   <Card.Text>
                     Learn about how we met and our journey to this special day.
                   </Card.Text>
+                  <Link to="/our-story">
+                    <Button variant="outline-primary">Learn More</Button>
+                  </Link>
                 </Card.Body>
               </StyledCard>
             </Col>
@@ -242,6 +245,9 @@ const Home = ({ user }) => {
                   <Card.Text>
                     Find all the information about our wedding day events.
                   </Card.Text>
+                  <Link to="/wedding-details">
+                    <Button variant="outline-primary">Learn More</Button>
+                  </Link>
                 </Card.Body>
               </StyledCard>
             </Col>
