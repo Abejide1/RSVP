@@ -64,61 +64,11 @@ function WeddingDetails() {
               <Card.Body>
                 <h3 className="mb-4 text-center">Thursday, July 30, 2026</h3>
                 
-                <TimelineItem>
-                  <div className="icon">
-                    <FaClock />
-                  </div>
-                  <div className="time">3:00 PM</div>
-                  <div className="details">
-                    <h5>Guests Arrival</h5>
-                    <p>Guests arrive and are seated at the ceremony venue.</p>
-                  </div>
-                </TimelineItem>
-                
-                <TimelineItem>
-                  <div className="icon">
-                    <FaClock />
-                  </div>
-                  <div className="time">4:00 PM</div>
-                  <div className="details">
-                    <h5>Wedding Ceremony</h5>
-                    <p>The wedding ceremony begins.</p>
-                    <p>Please arrive at least 30 minutes early to be seated.</p>
-                  </div>
-                </TimelineItem>
-                
-                <TimelineItem>
-                  <div className="icon">
-                    <FaClock />
-                  </div>
-                  <div className="time">5:00 PM</div>
-                  <div className="details">
-                    <h5>Cocktail Hour</h5>
-                    <p>Enjoy drinks and appetizers while the wedding party takes photos.</p>
-                  </div>
-                </TimelineItem>
-                
-                <TimelineItem>
-                  <div className="icon">
-                    <FaClock />
-                  </div>
-                  <div className="time">6:00 PM</div>
-                  <div className="details">
-                    <h5>Reception</h5>
-                    <p>Dinner, speeches, and dancing.</p>
-                  </div>
-                </TimelineItem>
-                
-                <TimelineItem>
-                  <div className="icon">
-                    <FaClock />
-                  </div>
-                  <div className="time">11:00 PM</div>
-                  <div className="details">
-                    <h5>Farewell</h5>
-                    <p>The celebration concludes.</p>
-                  </div>
-                </TimelineItem>
+                <div className="text-center py-5">
+                  <h4 style={{ color: 'var(--primary-color)' }}>Wedding Day Schedule</h4>
+                  <p className="lead my-4">TBA</p>
+                  <p>Detailed schedule will be provided closer to the wedding date.</p>
+                </div>
                 
                 <div className="mt-5 mb-3">
                   <h4>Dress Code</h4>

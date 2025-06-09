@@ -31,19 +31,23 @@ function OurStory() {
               <Card.Body>
                 <h3 className="mb-4">How We Met</h3>
                 <p>
-                  This is where you'll share the story of how you met. You can include details about your first meeting,
-                  how your relationship developed, and what made you fall in love.
+                  Our story began in London, England where we first met. It was truly love at first sight - a moment that would
+                  change our lives forever. After our initial meeting, we went to get food together, spending hours talking
+                  and laughing as if we'd known each other for years, not hours.
                 </p>
                 
                 <h3 className="mb-4 mt-5">The Proposal</h3>
                 <p>
-                  Share the details of the proposal here. Where did it happen? Was it a surprise? What made the moment special?
+                  On a beautiful day in Miami Beach, our journey toward marriage officially began. The proposal was small
+                  and intimate, just the way we wanted it. With the sound of waves in the background and the sunset
+                  painting the sky, we made the commitment to spend our lives together.
                 </p>
                 
                 <h3 className="mb-4 mt-5">Our Journey Together</h3>
                 <p>
-                  This section can include highlights from your relationship - travels you've taken together, milestones you've
-                  achieved, or challenges you've overcome as a couple.
+                  We want to express our deepest gratitude to everyone who has supported our relationship and helped us
+                  get to where we are today. From family members who cheered us on from the beginning, to friends who
+                  stood by us through every up and down, your love and encouragement have meant the world to us.
                 </p>
                 
                 <div className="text-center mt-5">
